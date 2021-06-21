@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"></html>
+
+<head>
+    <!--  Comment      -->
+    <Title>Home Page</Title>
+    <title>L3_CSS_Combinators _Demo1</title>
+    <style>
+        em {
+            color:#0094ff;
+        }
+        /* Descendent combinator: more specific */
+        p em{
+          color:#ff0000;
+        }
+        /* Direct child */
+        body > footer {
+            color:#00ff21;
+        }
+       /* Adjacent-sibling combinator  */
+       h1 + p{
+           color:#4800ff;
+       }
+      /* all siblings  */
+       h1 ~ p {
+           background-color:#808080;
+       }
+       /* p:hover -- pseduo class  */
+       p.hover:hover{
+           background-color:#ffd800;
+       }
+    </style>
+</head>
+
+<body>
+    <h1>Big heading</h1>
+    <h2> &lt;h1&gt; Small heading &lt;h1&gt; </h2>
+    <h3>Smaller heading</h3>
+    <h4>Smallest heading</h4>
+    <!--  -->
+
+
+
+
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore illo nulla iure adipisci quaerat itaque vel
+        nobis possimus aut veniam dolor facere facilis, nostrum eaque fugit similique sequi! Fugiat, pariatur?</p>
+
+    <table>
+        <tr>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>Doe</td>
+            <td>80</td>
+        </tr>
+    </table>
+
+    <body>
+        <form action="index.html" method="post">
+            <h1> Sign Up </h1>
+            <fieldset>
+                <legend><span class="number">1</span> Your Basic Info</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="user_name">
+                <br>
+                <label for="email">Email:</label>
+                <input type="email" id="mail" name="user_email">
+                <br>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="user_password">
+                <br>
+                <label>Gender:</label>
+                <br>
+                <input type="radio" id="m_gender" value="m_gender" name="gender"><label for="m_gender">Male</label><br>
+                <input type="radio" id="f_gender" value="f_gender" name="gender"><label for="f_gender">Female</label>
+            </fieldset>
+            <button type="submit">Sign Up</button>
+        </form>
+
+
+        <h1 id="heading" class="font"> A <em>heading</em></h1>
+        <p class="font">A paragraph <em>with emphasis</em></p>
+        <header>
+            <h1>Header</h1>
+        </header>
+        <article>
+            <h1>Article</h1>
+            <p>paragraph 1</p>
+            <p>paragraph 2</p>
+            <footer>Article footer</footer>
+        </article>
+        <footer>
+            Body footer
+        </footer>
+        <p class="hover">hover me</p>
+        <article>
+            <h1>Article</h1>
+            <p>Paragraph 1</p>
+            <p>Paragraph 2</p>
+            <blockquote>Quote</blockquote>
+            <p>Paragraph 3</p>
+            <footer>Article footer</footer>
+        </article>
+        <footer>Body footer</footer>
+
+
+    </body>
+
+
+
+</html>
